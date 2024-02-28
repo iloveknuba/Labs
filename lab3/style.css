@@ -4,3 +4,10 @@
 .white  {
     background-color: white!important;
 }
+.invert-colors .black {
+    background-color: white!important;
+}
+
+.invert-colors .white {
+    background-color: black!important;
+}

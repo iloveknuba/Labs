@@ -15,31 +15,17 @@ for (let i = 0; i < 30; i++) {
 }
 function cellClick(event) {
     event.stopPropagation();
-    // Отримання посилання на клітинку, на яку клікнули
     let cell = event.target;
-
-    if(cell.classList.contains("black")){
-
-        cell.classList.replace("black","white");
-    }
-    else
-    {
-
-        cell.classList.replace("white","black");
-    }
+    cell.classList.toggle("white");
+    cell.classList.toggle("black");
 }
 
+// Обробник події для <body> - змінює кольори всіх клітинок на протилежні
 document.body.addEventListener("click", function() {
-    // Отримати всі клітинки таблиці
-    var cells = document.querySelectorAll("td");
-
-    // Змінити кожну клітинку на білий колір
-    cells.forEach(function(cell) {
-        cell.classList.contains("white")
-            ? cell.classList.replace("white","black")
-            : cell.classList.replace("black", "white")
-    });
+    table.classList.toggle("invert-colors");
 });
+
+
 
 
 // Додавання таблиці до DOM
