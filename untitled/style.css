@@ -1,3 +1,8 @@
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 .navbar-container{
     display: flex;
     align-items: center;
@@ -58,6 +63,7 @@
     background-color: #333333;
     right: 0;
     margin: 0;
+    z-index: 1;
 }
 .dropdown-content a {
     color: black;
@@ -67,10 +73,145 @@
 }
 .dropdown-content a:hover {background-color: #ddd;}
 
+
+
+/*Images*/
+
+.main-image {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.main-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.text-overlay {
+    color: white;
+    font-size: 4vw;
+    position: absolute;
+    top: 15vw;
+    left: 25vw;
+    transform: translate(-50%, -50%); /* прозорість тексту */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+.image-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+.image-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0;
+    margin:0;
+
+}
+.image-list-item img {
+    display: block;
+    width: 31vw;
+    height: auto;
+
+}
+.image-list-item .image-text {
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.image-btn{
+    display: none;
+    background-color: green;
+    width: 50px;
+    height: 100px;
+    padding: 5px;
+}
+/*Images*/
+/*BODy*/
+
+
+.full-menu-container{
+    display: block;
+}
+
+.black-bar{
+    background-color: #3f4043;
+    width: 100%;
+    padding: 20px 20px 20px 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+.green-bar{
+    background-color: #acd8ad;
+    width: 100%;
+    padding: 20px 20px 20px 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+.black-bar span{
+    color: #acd8ad;
+}
+.green-bar span{
+    color: white;
+}
+
+.logo-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+}
+.logo-bar span{
+    font-size: 30px;
+}
+.logo-bar img{
+    width: 50px;
+    height: 50px;
+}
+.list-item span{
+    font-size: 27px;
+}
+.price{
+    font-weight: 700;
+}
+.description{
+    font-size: 18px;
+}
+.menu-list{
+    display:block;
+    margin: 30px;
+    padding: 10px;
+}
+.list-item{
+
+}
+.price-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*BODy*/
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 780px) {
 
 
     .navbar-container .brand-container .navbar-content {
@@ -86,8 +227,53 @@
     .menu-container .dropdown{
         display: none;
     }
+    /*Images*/
+
+    .image-btn{
+        display: none;
+    }
+
+
+    .image-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .image-list-item {
+        flex: 1;/* Кожен елемент займає рівно простір */
+        display: flex;
+        align-items: center; /* Вирівнюємо вміст по вертикалі */
+        justify-content: center;
+        margin: 0;
+        padding: 0;/* Вирівнюємо вміст по горизонталі */ /* Додаємо маржу між елементами */
+    }
+
+    .item-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-btn {
+        display: none; /* Робимо кнопки невидимими */
+    }
+
+    .item-container img {
+        width: 31vw; /* Фото займає всю доступну ширину */
+        height: auto; /* Обрізання фото до розміру контейнера */
+    }
+    /*
+    BODY
+    */
+
+    .full-menu-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 780px) {
     .brand-container span{
         display: block;
 
@@ -101,4 +287,45 @@
     .menu-container .dropdown{
         display: block;
     }
+
+    /* Images */
+
+    .image-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: block /* Встановлення вертикального напрямку для списку */
+    }
+
+    .image-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1px/* Вирівнюємо фото та кнопку по вертикалі */
+    }
+
+    .item-container {
+        flex: 1; /* Фото буде розтягнуте на залишок вільного простору */
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-btn {
+        display: block;
+        width: 30%; /* Кнопка займатиме 30% ширини */
+        height: 30%; /* Фіксована висота */
+        line-height: 50px; /* Вирівнюємо текст у кнопці по вертикалі */
+        background-color: #ccc;
+        text-align: center;
+        margin-left: auto; /* Кнопка вирівнюється до правого краю */
+    }
+
+    .item-container img {
+        width: 130%; /* Ширина фото */
+        height: 60px; /* Висота фото */
+        object-fit: cover; /* Обрізання фото до розміру контейнера */
+    }
+
 }
