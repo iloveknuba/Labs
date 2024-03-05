@@ -4,17 +4,18 @@ body{
     font-style: normal;
 }
 .navbar-container{
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #0a53be;
+    background-color: #373c3f;
 
 }
 
 .navbar-content a{
     padding-left: 20px;
     text-decoration: none;
-    color: #333333;
+    color: #999999;
 }
 .navbar-container .brand-container span{
     padding-left: 20px;
@@ -35,8 +36,8 @@ body{
 }
 
 .menu-container img{
-    width: 60px;
-    height: 40px;
+    width: 70px;
+    height: 50px;
 }
 
 
@@ -59,19 +60,19 @@ body{
 .dropdown-content{
     position: absolute;
     display: none;
-    min-width: 100px;
-    background-color: #333333;
+    min-width: 220px;
+    background-color: #fafafa;
     right: 0;
     margin: 0;
     z-index: 1;
 }
 .dropdown-content a {
-    color: black;
+    color: #999999;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #f5f5f5;}
 
 
 
@@ -121,8 +122,8 @@ body{
 
 }
 .image-list-item img {
-    display: block;
-    width: 31vw;
+    display: flex;
+    width: 31.7vw;
     height: auto;
 
 }
@@ -138,7 +139,7 @@ body{
 }
 .image-btn{
     display: none;
-    background-color: green;
+    background-color: #acd8ad;
     width: 50px;
     height: 100px;
     padding: 5px;
@@ -207,6 +208,23 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+.mid-bar{
+    padding: 20px;
+}
+.mid-bar p{
+    font-size: 40px;
+    margin: 0;
+}
+.mid-bar .mini-text{
+    font-size: 20px;
+    color: #cbccce;
+}
+.main-logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 30px 10px 30px;
+}
 /*BODy*/
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
@@ -229,24 +247,22 @@ body{
     }
     /*Images*/
 
-    .image-btn{
-        display: none;
-    }
-
-
     .image-list {
+        display: flex;
+        width: 100%;
+        overflow-x: hidden;
         list-style-type: none;
         padding: 0;
         margin: 0;
     }
 
     .image-list-item {
-        flex: 1;/* Кожен елемент займає рівно простір */
+        flex: 1;
+        max-width: 100%;
+        height: auto;/* Кожен елемент займає рівно простір */
         display: flex;
         align-items: center; /* Вирівнюємо вміст по вертикалі */
-        justify-content: center;
-        margin: 0;
-        padding: 0;/* Вирівнюємо вміст по горизонталі */ /* Додаємо маржу між елементами */
+        justify-content: center; /* Вирівнюємо вміст по горизонталі */ /* Додаємо маржу між елементами */
     }
 
     .item-container {
@@ -258,20 +274,17 @@ body{
         display: none; /* Робимо кнопки невидимими */
     }
 
-    .item-container img {
-        width: 31vw; /* Фото займає всю доступну ширину */
-        height: auto; /* Обрізання фото до розміру контейнера */
-    }
+
     /*
     BODY
     */
 
     .full-menu-container{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
-
+    .menu-part{
+        flex: 1;
+    }
 }
 @media screen and (max-width: 780px) {
     .brand-container span{
@@ -280,6 +293,9 @@ body{
     }
     .brand-container .navbar-content{
         display: none;
+    }
+    .brand-container span{
+        color: #e4e5e5  ;
     }
     .menu-container img{
         display: none;
@@ -314,10 +330,11 @@ body{
 
     .image-btn {
         display: block;
+        color: #e5f3e5;
         width: 30%; /* Кнопка займатиме 30% ширини */
         height: 30%; /* Фіксована висота */
         line-height: 50px; /* Вирівнюємо текст у кнопці по вертикалі */
-        background-color: #ccc;
+        background-color: #acd8ad;
         text-align: center;
         margin-left: auto; /* Кнопка вирівнюється до правого краю */
     }
@@ -326,6 +343,11 @@ body{
         width: 130%; /* Ширина фото */
         height: 60px; /* Висота фото */
         object-fit: cover; /* Обрізання фото до розміру контейнера */
+    }
+    /*body*/
+
+    .main-logo-container img{
+        display: none;
     }
 
 }
