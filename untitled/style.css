@@ -4,7 +4,6 @@ body{
     font-style: normal;
 }
 .navbar-container{
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -123,13 +122,13 @@ body{
 }
 .image-list-item img {
     display: flex;
-    width: 31.7vw;
+    width: 100%;
     height: auto;
 
 }
 .image-list-item .image-text {
     color: white;
-    font-size: 3vw;
+    font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -155,29 +154,31 @@ body{
 .black-bar{
     background-color: #3f4043;
     width: 100%;
-    padding: 20px 20px 20px 30px;
+    padding: 10px 0;
     margin-bottom: 10px;
-    font-size: 40px;
+    font-size: 37px;
 }
 .green-bar{
     background-color: #acd8ad;
     width: 100%;
-    padding: 20px 20px 20px 30px;
+    padding: 10px 0;
     margin-bottom: 10px;
-    font-size: 40px;
+    font-size: 37px;
 }
 .black-bar span{
     color: #acd8ad;
+    padding: 20px;
 }
 .green-bar span{
     color: white;
+    padding: 20px;
 }
 
 .logo-bar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 30px;
+    margin: 20px;
 }
 .logo-bar span{
     font-size: 30px;
@@ -197,8 +198,9 @@ body{
 }
 .menu-list{
     display:block;
-    margin: 30px;
+    margin: 10px;
     padding: 10px;
+    list-style: none;
 }
 .list-item{
 
@@ -209,7 +211,7 @@ body{
     justify-content: space-between;
 }
 .mid-bar{
-    padding: 20px;
+    padding: 10px;
 }
 .mid-bar p{
     font-size: 40px;
@@ -223,13 +225,38 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 30px 10px 30px;
+    margin-top:40px;
+
 }
 /*BODy*/
+/*Footer*/
+
+footer {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #acd8ad;
+}
+footer img{
+    display: block;
+    padding: 10px 20px;
+}
+footer div{
+    padding-right: 20px;
+}
+footer span{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+}
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 980px) {
 
 
     .navbar-container .brand-container .navbar-content {
@@ -258,7 +285,6 @@ body{
 
     .image-list-item {
         flex: 1;
-        max-width: 100%;
         height: auto;/* Кожен елемент займає рівно простір */
         display: flex;
         align-items: center; /* Вирівнюємо вміст по вертикалі */
@@ -285,8 +311,11 @@ body{
     .menu-part{
         flex: 1;
     }
+    /*Footer*/
+
+
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 980px) {
     .brand-container span{
         display: block;
 
@@ -324,24 +353,21 @@ body{
         flex: 1; /* Фото буде розтягнуте на залишок вільного простору */
         position: relative;
         overflow: hidden;
-        margin: 0;
-        padding: 0;
     }
 
     .image-btn {
         display: block;
         color: #e5f3e5;
-        width: 30%; /* Кнопка займатиме 30% ширини */
-        height: 30%; /* Фіксована висота */
-        line-height: 50px; /* Вирівнюємо текст у кнопці по вертикалі */
+        width: 20%; /* Кнопка займатиме 30% ширини */
+        height: 19vw; /* Фіксована висота */
+        line-height: 15vw; /* Вирівнюємо текст у кнопці по вертикалі */
         background-color: #acd8ad;
-        text-align: center;
-        margin-left: auto; /* Кнопка вирівнюється до правого краю */
+        text-align: center; /* Кнопка вирівнюється до правого краю */
     }
 
     .item-container img {
-        width: 130%; /* Ширина фото */
-        height: 60px; /* Висота фото */
+        width: 100%; /* Ширина фото */
+        height: 20vw; /* Висота фото */
         object-fit: cover; /* Обрізання фото до розміру контейнера */
     }
     /*body*/
@@ -350,4 +376,55 @@ body{
         display: none;
     }
 
+    /*footer*/
+    footer{
+        display: block;
+        text-align: center;
+    }
+    footer img{
+        display: none;
+    }
+    footer span{
+        display: block;
+        margin: 0 auto;
+    }
+    footer div{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .black-bar{
+        font-size: 20px;
+    }
+    .green-bar{
+        font-size: 20px;
+    }
+    .logo-bar span{
+        font-size: 15px;
+    }
+    .list-item span{
+        font-size: 13.5px;
+    }
+    .description{
+        font-size: 8.78px;
+    }
+    .mid-bar p{
+        font-size: 17px;
+    }
+    .mid-bar .mini-text{
+        font-size: 10px;
+    }
+    .logo-bar img{
+        width: 25px;
+        height: 25px;
+    }
+    .logo-bar{
+        margin: 0 20px;
+    }
+    .menu-list{
+        margin: 0 10px;
+    }
+    footer span{
+        font-size: 12px;
+    }
 }
